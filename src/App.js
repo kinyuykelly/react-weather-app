@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
     <SearchEngine />
-    <footer>Code by <a href='/'>Kinuy Kelly</a> and open-sourced on <a href=''>GitHub</a></footer>
+    <footer>Code by <a href='https://github.com/Kinyuykelly'>Kinyuy Kelly</a> and open-sourced on <a href='https://github.com/Kinyuykelly/react-weather-app'>GitHub</a></footer>
     </div>
   );
 }
