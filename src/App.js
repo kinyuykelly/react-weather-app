@@ -1,13 +1,16 @@
-import SearchEngine from './components/SearchEngine';
+import Weather from './components/Weather';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-    <SearchEngine />
-    <footer>Code by <a href='https://github.com/Kinyuykelly'>Kinyuy Kelly</a> and open-sourced on <a href='https://github.com/Kinyuykelly/react-weather-app'>GitHub</a></footer>
+      <div className='container'>
+      <Weather defaultcity='New York'/>
+    <footer>Coded by {""} <a href='https://github.com/Kinyuykelly' target='_blank'> Kinyuy Kelly</a> {""} and open-sourced on {""}
+     <a href='https://github.com/Kinyuykelly/react-weather-app' target='_blank'> {""}GitHub</a></footer>
+      </div>
+    
     </div>
   );
 }
 
-export default App;
