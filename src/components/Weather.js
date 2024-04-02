@@ -3,6 +3,9 @@ import axios from 'axios';
 import './Weather.css';
 import WeatherInfo from "./WeatherInfo";
 
+
+
+
 export default function Weather(props){
     const [weatherData, setWeatherData] = useState({ready: false});
     const [city, setCity] = useState(props.defaultcity);
@@ -15,7 +18,7 @@ export default function Weather(props){
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             city: response.data.name,
-            iconUrl: "",
+            icon:response.data.weather[0].icon,
             date: new Date(response.data.dt * 1000), 
             description: response.data.weather[0].description
 
