@@ -1,6 +1,6 @@
 .weather{
     border: 1px solid #dadde1;
-    color: #878787;
+    color: #656464;
     font-family: Arial, Helvetica, sans-serif;
     padding: 16px;
     background: #fffbf7;
@@ -45,5 +45,8 @@ margin-right: 10px;
     line-height: 1;
     top: -34px;
     margin-left: 5px;
-
+}
+.loader{
+    width: 120px;
+   margin: auto !important;
 }

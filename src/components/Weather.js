@@ -3,9 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
-
-
-
+import LoadingIcons from 'react-loading-icons'
 
 export default function Weather(props){
     const [weatherData, setWeatherData] = useState({ready: false});
@@ -50,7 +48,7 @@ export default function Weather(props){
                         <input type="search" placeholder="Enter a city.." className="form-control" autoFocus="on" onChange={handleCityChange} /> 
                         </div>
                         <div className="col-3">
-                        <button type="submit" className="btn btn-primary w-100 ">search</button>
+                        <button type="submit" className="btn btn-primary w-100 text-light">search</button>
                         </div>
                     </div>
                 </form>
@@ -62,6 +60,10 @@ export default function Weather(props){
     else{    
             search();
     }   
-    return ('Loading...');
+    return (
+        <div className="loader">
+        <LoadingIcons.ThreeDots stroke="grey" strokeOpacity={1} speed={.75} />
+        </div>
+    );
   
 }
