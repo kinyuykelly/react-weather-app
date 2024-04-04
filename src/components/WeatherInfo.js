@@ -16,9 +16,9 @@ export default function WeatherInfo(props) {
                </ul>
                 <div className="row mt-3">
                     <div className="col-6 flex">
-                        <div className="clearfix d-flex gap-3 ">
+                        <div className="clearfix d-flex gap-1 ">
                           <div className="left">
-                          <WeatherIcon code = {props.data.icon}/>
+                          <WeatherIcon code = {props.data.icon} size ={52}/>
                           </div>
                        
                     <div className="right">

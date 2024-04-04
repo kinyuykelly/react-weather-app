@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 
@@ -11,9 +12,9 @@ export default function Weather(props){
     const [city, setCity] = useState(props.defaultcity);
    
     function handleResponse(response){  
-        console.log(response.data);
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
@@ -24,6 +25,7 @@ export default function Weather(props){
 
         })
     }
+    
     function search(){
         const apiKey ='ab8e7ef210556986d1c9a75d6007b825';
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}
@@ -48,12 +50,12 @@ export default function Weather(props){
                         <input type="search" placeholder="Enter a city.." className="form-control" autoFocus="on" onChange={handleCityChange} /> 
                         </div>
                         <div className="col-3">
-                        <button type="submit" className="btn btn-primary w-100">search</button>
+                        <button type="submit" className="btn btn-primary w-100 ">search</button>
                         </div>
                     </div>
                 </form>
-               <WeatherInfo data= {weatherData} />
-             
+               <WeatherInfo data={weatherData} />
+                <WeatherForecast coordinates={weatherData.coordinates}/>
             </div>
         );
     }
