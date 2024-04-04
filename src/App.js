@@ -9,7 +9,6 @@ export default function App() {
     <footer>Coded by {""} <a href='https://github.com/Kinyuykelly' target='_blank' rel="noreferrer"> Kinyuy Kelly</a> {""} and open-sourced on {""}
      <a href='https://github.com/Kinyuykelly/react-weather-app' target='_blank' rel="noreferrer"> {""}GitHub</a></footer>
       </div>
-    
     </div>
   );
 }
